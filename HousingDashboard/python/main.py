@@ -1,48 +1,45 @@
 import streamlit as st
-import pandas as pd
-import numpy as np
 
-# Set the title of the app
-st.title("Smart Housing Finder")
+# Set the page configuration
+st.set_page_config(page_title="Smart Housing Finder", layout="wide")
 
-# Introduction
-st.write("""
-Welcome to the Smart Housing Finder! This app helps you find affordable smart housing options within your budget.
-You can explore various factors like rent, energy efficiency, smart features, and neighborhood quality.
-""")
+# Header
+st.markdown("<h1 style='text-align: left; color: white;'>Empowering Futures Through Smart Housing</h1>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: left; color: white;'>Find affordable smart housing options tailored to your needs.</p>", unsafe_allow_html=True)
 
-# User Input Section
-st.sidebar.header("User Preferences")
-budget = st.sidebar.slider("Select your budget range:", 500, 5000, (1000, 3000))
-preferred_areas = st.sidebar.multiselect("Preferred Areas:", ["Area 1", "Area 2", "Area 3"])
-priorities = st.sidebar.multiselect("Priorities:", ["Public Transport", "Air Quality", "Green Spaces"])
+# Main content
+col1, col2 = st.columns([2, 1])
 
-# Data Visualization
-st.header("Affordable Housing Market Areas")
-# Placeholder for data visualization
-st.write("Visualize affordable housing areas here.")
+with col1:
+    st.button("Start Your Journey")
+    st.button("Discover Programs")
 
-st.header("Demographic Profiles")
-# Placeholder for demographic data visualization
-st.write("Visualize demographic profiles here.")
+with col2:
+    st.markdown("<h3 style='color: white;'>Why Choose Us</h3>", unsafe_allow_html=True)
+    st.markdown("""
+    <ul style='color: white;'>
+        <li>Affordable Housing Market Areas</li>
+        <li>Demographic Profiles</li>
+        <li>Public Transport Accessibility</li>
+        <li>Air Quality and Green Spaces</li>
+        <li>Local Development Plans</li>
+    </ul>
+    """, unsafe_allow_html=True)
 
-st.header("Public Transport Accessibility")
-# Placeholder for transport data visualization
-st.write("Visualize public transport accessibility here.")
+# Footer
+st.markdown("<hr>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; color: white;'>Upcoming Events</p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; color: white;'>NOV 15 - Open House Day | DEC 5 - Application Workshop | JAN 10 - Orientation</p>", unsafe_allow_html=True)
 
-st.header("Environmental Quality")
-# Placeholder for environmental data visualization
-st.write("Visualize air quality and green spaces here.")
-
-st.header("Local Development Plans")
-# Placeholder for governance data visualization
-st.write("Visualize local development plans here.")
-
-# Recommendations
-st.header("Housing Recommendations")
-# Placeholder for recommendations based on user input and data analysis
-st.write("Display tailored housing recommendations here.")
-
-# Additional Information
-st.header("Additional Information")
-st.write("Provide insights into local development plans and other relevant information here.")
+# Background styling
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-image: url('YOUR_IMAGE_URL_HERE');
+        background-size: cover;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
