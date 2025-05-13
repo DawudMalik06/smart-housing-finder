@@ -65,7 +65,7 @@ st.markdown(
 st.markdown(
     """
     <div class="navbar">
-        <div><img src="https://static.vecteezy.com/system/resources/thumbnails/035/941/264/small_2x/ai-generated-networking-building-business-background-photo.jpg" height="30"> <strong>SmartHousing</strong></div>
+        <div><strong>SmartHousing</strong></div>
         <div>
             <a href="#">Home</a>
             <a href="#">About</a>
