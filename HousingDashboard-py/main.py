@@ -1,28 +1,26 @@
 import streamlit as st
+import base64
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 st.set_page_config(page_title="SmartHousing", layout="wide")
 
 # CSS that animates full-page background via ::before on .stApp
 st.markdown("""
     <style>
-    .stApp::before {
-        content: "";
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        z-index: -1;
-        animation: bgSlide 20s infinite;
+    .stApp {
+        animation: bgSlide 25s infinite;
         background-size: cover;
         background-position: center;
+        background-repeat: no-repeat;
     }
 
     @keyframes bgSlide {
-        0%   { background-image: url('https://i.postimg.cc/ncP3vLPb/House-Image-1.avif'); }
-        33%  { background-image: url('https://i.postimg.cc/85LCbsHy/House-Image-2.avif'); }
-        66%  { background-image: url('https://i.postimg.cc/8CMG296c/House-Image-3.avif'); }
-        100% { background-image: url('https://i.postimg.cc/wMBSjG7h/House-Image-4.avif'); }
+        0%   { background-image: url('https://images.unsplash.com/photo-1580587771525-78b9dba3b914'); }
+        33%  { background-image: url('https://images.unsplash.com/photo-1568605114967-8130f3a36994'); }
+        66%  { background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c'); }
+        100% { background-image: url('https://images.unsplash.com/photo-1580587771525-78b9dba3b914'); }
     }
 
     .shadow-text {
@@ -70,18 +68,43 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # --- NAVBAR ---
-st.markdown("""
-    <div class="navbar">
-        <div><strong>SmartHousing</strong></div>
-        <div>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Data Insights</a>
-            <a href="#">Compare Areas</a>
-            <a href="#">Contact</a>
-        </div>
-    </div>
-""", unsafe_allow_html=True)
+page = st.selectbox("Navigate", ["Home", "Data Insights", "Compare Areas"])
+
+# --- PAGE CONTENT SWITCHING ---
+if page == "Home":
+    st.title("🏠 Home Page")
+    st.write("Welcome to the Smart Housing Finder")
+
+elif page == "Data Insights":
+    st.title("📊 Data Insights")
+    st.markdown("Explore housing data across Sheffield:")
+
+    try:
+        df = pd.read_csv("data/housing_insights.csv")
+        sns.set(style="whitegrid")
+        fig, axs = plt.subplots(2, 2, figsize=(12, 8))
+
+        sns.barplot(x="Avg Rent (£)", y="Area", data=df, ax=axs[0, 0], palette="Blues_d")
+        axs[0, 0].set_title("Average Rent by Area")
+
+        sns.barplot(x="Transport Score", y="Area", data=df, ax=axs[0, 1], palette="Greens_d")
+        axs[0, 1].set_title("Public Transport Accessibility")
+
+        sns.barplot(x="Energy Rating A-B (%)", y="Area", data=df, ax=axs[1, 0], palette="Oranges_d")
+        axs[1, 0].set_title("Energy-Efficient Homes")
+
+        sns.barplot(x="Smart Homes (%)", y="Area", data=df, ax=axs[1, 1], palette="Purples_d")
+        axs[1, 1].set_title("Smart Feature Adoption")
+
+        plt.tight_layout()
+        st.pyplot(fig)
+
+    except FileNotFoundError:
+        st.error("❌ CSV file not found. Please check the path: `data/housing_insights.csv`")
+
+elif page == "Compare Areas":
+    st.title("📍 Compare Areas")
+    st.write("Comparison feature coming soon!")
 
 # --- HERO SECTION ---
 col1, col2 = st.columns([2, 1])
