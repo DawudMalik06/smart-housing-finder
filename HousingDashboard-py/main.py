@@ -1,20 +1,30 @@
 import streamlit as st
-import base64
-
 
 st.set_page_config(page_title="SmartHousing", layout="wide")
 
-# ✅ CSS override for the entire Streamlit app background
-st.markdown(
-   f"""
+# CSS that animates full-page background via ::before on .stApp
+st.markdown("""
     <style>
-    /* Set background on the main Streamlit app container */
-    .stApp {
-        background: url('https://static.vecteezy.com/system/resources/thumbnails/035/941/264/small_2x/ai-generated-networking-building-business-background-photo.jpg') no-repeat center center fixed;
+    .stApp::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        animation: bgSlide 20s infinite;
         background-size: cover;
+        background-position: center;
     }
 
-    /* Optional: add shadow to navbar/text for readability */
+    @keyframes bgSlide {
+        0%   { background-image: url('https://i.postimg.cc/ncP3vLPb/House-Image-1.avif'); }
+        33%  { background-image: url('https://i.postimg.cc/85LCbsHy/House-Image-2.avif'); }
+        66%  { background-image: url('https://i.postimg.cc/8CMG296c/House-Image-3.avif'); }
+        100% { background-image: url('https://i.postimg.cc/wMBSjG7h/House-Image-4.avif'); }
+    }
+
     .shadow-text {
         text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
     }
@@ -57,13 +67,10 @@ st.markdown(
         text-decoration: underline;
     }
     </style>
-    """,
-    unsafe_allow_html=True
-)
+""", unsafe_allow_html=True)
 
 # --- NAVBAR ---
-st.markdown(
-    """
+st.markdown("""
     <div class="navbar">
         <div><strong>SmartHousing</strong></div>
         <div>
@@ -74,9 +81,7 @@ st.markdown(
             <a href="#">Contact</a>
         </div>
     </div>
-    """,
-    unsafe_allow_html=True
-)
+""", unsafe_allow_html=True)
 
 # --- HERO SECTION ---
 col1, col2 = st.columns([2, 1])
@@ -93,15 +98,14 @@ with col1:
         st.button("Discover Programs")
 
 with col2:
-    st.markdown(
-        "<div class='stat-card'>"
-        "<h4>🎓 98% Graduate Employment</h4>"
-        "<h4>🌍 45+ International Partners</h4>"
-        "<h4>👩‍🏫 15:1 Student-Faculty Ratio</h4>"
-        "<h4>📚 120+ Degree Programs</h4>"
-        "</div>",
-        unsafe_allow_html=True
-    )
+    st.markdown("""
+        <div class='stat-card'>
+            <h4>🎓 98% Graduate Employment</h4>
+            <h4>🌍 45+ International Partners</h4>
+            <h4>👩‍🏫 15:1 Student-Faculty Ratio</h4>
+            <h4>📚 120+ Degree Programs</h4>
+        </div>
+    """, unsafe_allow_html=True)
 
 # --- TIMELINE ---
 st.markdown("###")
