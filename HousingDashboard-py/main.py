@@ -1,10 +1,12 @@
 import streamlit as st
+import base64
+
 
 st.set_page_config(page_title="SmartHousing", layout="wide")
 
 # ✅ CSS override for the entire Streamlit app background
 st.markdown(
-    """
+   f"""
     <style>
     /* Set background on the main Streamlit app container */
     .stApp {
