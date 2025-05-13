@@ -1,90 +1,121 @@
 import streamlit as st
 
-# Page setup
-st.set_page_config(page_title="SmartHousing Sheffield", layout="wide")
+st.set_page_config(page_title="SmartHousing", layout="wide")
 
-# --- Custom CSS Styling ---
-st.markdown("""
+# ✅ CSS override for the entire Streamlit app background
+st.markdown(
+    """
     <style>
-    .hero {
-        background-image: url('https://fakeimg.com/hero.jpg');
+    /* Set background on the main Streamlit app container */
+    .stApp {
+        background: url('https://static.vecteezy.com/system/resources/thumbnails/035/941/264/small_2x/ai-generated-networking-building-business-background-photo.jpg') no-repeat center center fixed;
         background-size: cover;
-        background-position: center;
-        padding: 5rem 2rem;
-        border-radius: 12px;
-        color: white;
     }
-    .metric-box {
-        background-color: rgba(0, 0, 0, 0.65);
-        padding: 1.5rem;
-        border-radius: 10px;
-        color: white;
-        margin-top: 1rem;
+
+    /* Optional: add shadow to navbar/text for readability */
+    .shadow-text {
+        text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
     }
-    .timeline {
-        background-color: #16a085;
+
+    .navbar {
+        background-color: white;
         padding: 1rem 2rem;
-        color: white;
-        border-radius: 8px;
-        font-weight: bold;
-        margin-top: 3rem;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 0 0 12px 12px;
+        margin-bottom: 2rem;
     }
-    nav a {
-        margin-right: 20px;
-        color: #333;
+
+    .navbar a {
+        margin-left: 20px;
+        font-weight: 600;
         text-decoration: none;
+        color: #2c3e50;
+    }
+
+    .stat-card {
+        background-color: rgba(0,0,0,0.7);
+        border-radius: 10px;
+        padding: 2rem;
+        color: white;
+    }
+
+    .timeline-col {
+        background-color: #16a085;
+        border-radius: 8px;
+        padding: 1rem;
+        color: white;
+        text-align: center;
         font-weight: bold;
+    }
+
+    .timeline-col a {
+        color: white;
+        text-decoration: underline;
     }
     </style>
-""", unsafe_allow_html=True)
+    """,
+    unsafe_allow_html=True
+)
 
-# --- Navigation Bar ---
-st.markdown("""
-<nav style='background-color: #ffffff; padding: 1rem; display: flex; justify-content: space-between; align-items: center;'>
-    <div style='font-size: 20px; font-weight: bold;'><img src='https://fakeimg.com/logo.png' height='30'> SmartHousing</div>
-    <div>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Data Insights</a>
-        <a href="#">Compare Areas</a>
-        <a href="#">Contact</a>
+# --- NAVBAR ---
+st.markdown(
+    """
+    <div class="navbar">
+        <div><img src="https://static.vecteezy.com/system/resources/thumbnails/035/941/264/small_2x/ai-generated-networking-building-business-background-photo.jpg" height="30"> <strong>SmartHousing</strong></div>
+        <div>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Data Insights</a>
+            <a href="#">Compare Areas</a>
+            <a href="#">Contact</a>
+        </div>
     </div>
-</nav>
-""", unsafe_allow_html=True)
+    """,
+    unsafe_allow_html=True
+)
 
-# --- Hero Section ---
-st.markdown("""
-<div class='hero'>
-    <h1>Find Smart Housing That Fits Your Budget</h1>
-    <p>Explore affordable, efficient homes tailored for students, families, and low-income households across Sheffield.</p>
-    <div style='margin-top: 1.5rem;'>
-        <a href="#" style="padding: 12px 24px; background-color: #2ecc71; color: white; border-radius: 5px; margin-right: 15px; text-decoration: none;">Start Exploring</a>
-        <a href="#" style="padding: 12px 24px; background-color: #34495e; color: white; border-radius: 5px; text-decoration: none;">Learn More</a>
-    </div>
-</div>
-""", unsafe_allow_html=True)
-
-# --- Why Choose Us / Metrics Section ---
-col1, col2 = st.columns(2)
+# --- HERO SECTION ---
+col1, col2 = st.columns([2, 1])
 with col1:
-    st.markdown("""
-    <div class='metric-box'>
-        <h4>💸 Avg Rent Saved</h4>
-        <p>£250/month</p>
-        <h4>🚉 Transport Access</h4>
-        <p>90% Coverage</p>
-    </div>
-    """, unsafe_allow_html=True)
-with col2:
-    st.markdown("""
-    <div class='metric-box'>
-        <h4>🌳 Green Spaces Nearby</h4>
-        <p>75% of Listings</p>
-        <h4>📱 Smart Features</h4>
-        <p>85% Enabled Homes</p>
-    </div>
-    """, unsafe_allow_html=True)
+    st.markdown("<h1 class='shadow-text' style='color:white;'>Empowering Futures<br>Through Smart Housing</h1>", unsafe_allow_html=True)
+    st.markdown(
+        "<p class='shadow-text' style='color:white; font-size:1.1rem; max-width:600px;'>Explore affordable, energy-efficient homes tailored for students, families, and low-income households across Sheffield.</p>",
+        unsafe_allow_html=True
+    )
+    colA, colB = st.columns([1, 1])
+    with colA:
+        st.button("Start Your Journey")
+    with colB:
+        st.button("Discover Programs")
 
-# --- Timeline Bar ---
+with col2:
+    st.markdown(
+        "<div class='stat-card'>"
+        "<h4>🎓 98% Graduate Employment</h4>"
+        "<h4>🌍 45+ International Partners</h4>"
+        "<h4>👩‍🏫 15:1 Student-Faculty Ratio</h4>"
+        "<h4>📚 120+ Degree Programs</h4>"
+        "</div>",
+        unsafe_allow_html=True
+    )
+
+# --- TIMELINE ---
+st.markdown("###")
+col1, col2, col3 = st.columns(3)
+with col1:
+    st.markdown(
+        "<div class='timeline-col'><div>NOV 15</div><div>Open House Day</div><div><a href='#'>Register</a></div></div>",
+        unsafe_allow_html=True
+    )
+with col2:
+    st.markdown(
+        "<div class='timeline-col'><div>DEC 5</div><div>Application Workshop</div><div><a href='#'>Register</a></div></div>",
+        unsafe_allow_html=True
+    )
+with col3:
+    st.markdown(
+        "<div class='timeline-col'><div>JAN 10</div><div>Student Orientation</div><div><a href='#'>Register</a></div></div>",
+        unsafe_allow_html=True
+    )
