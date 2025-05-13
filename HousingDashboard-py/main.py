@@ -3,6 +3,7 @@ import base64
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import os
 
 st.set_page_config(page_title="SmartHousing", layout="wide")
 
@@ -80,7 +81,8 @@ elif page == "Data Insights":
     st.markdown("Explore housing data across Sheffield:")
 
     try:
-        df = pd.read_csv("data/housing_insights.csv")
+        csv_path = os.path.join(os.getcwd(), "data/housing_insights.csv")
+        df = pd.read_csv(csv_path)     
         sns.set(style="whitegrid")
         fig, axs = plt.subplots(2, 2, figsize=(12, 8))
 
