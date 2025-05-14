@@ -28,13 +28,13 @@ fetch('./sheffield.json')
         layer.on("mouseout", () => {
             geojson.resetStyle(layer);
         });
-        layer.on("click", () => {
+        /* layer.on("click", () => {
             const infoBox = document.getElementById("info-box");
             const content = document.getElementById("info-box-content");
             const areaName = feature.properties.WD13NM || "Unknown Area";
             infoBox.style.display = "block";
             content.innerHTML = `<h2>${areaName}</h2><p>More data coming soon...</p>`;
-        });
+        });*/
     }
     const geojson = L.geoJSON(data, {style: style, onEachFeature: onEachFeature}).addTo(map);
 })
