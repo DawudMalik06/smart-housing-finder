@@ -511,5 +511,20 @@ th {
     background: linear-gradient(90deg, #219150, #1a7e45);
     transform: scale(1.03);
 }
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    z-index: 10;
+    font-weight: bold;
+    transition: color 0.2s;
+}
 
-
+.close-btn:hover {
+    color: #c0392b;
+}

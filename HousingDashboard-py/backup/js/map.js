@@ -74,6 +74,10 @@ fetch('./sheffield.json')
                 `;
                 infoBox.style.display = "block";
             });
+            document.getElementById("close-info").addEventListener("click", () => {
+                document.getElementById("info-box").style.display = "none";
+            });
+            
         }
 
         geojsonLayer = L.geoJSON(data, {
