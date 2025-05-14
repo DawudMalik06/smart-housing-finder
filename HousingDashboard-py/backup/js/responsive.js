@@ -11,12 +11,12 @@ function scaleDash(){
     const app = document.getElementById('app');
 
     app.style.transform = `scale(${finalScaleX}, ${finalScaleY})`;
-    app.style.transformOrigin = "top left"; //centre causes whitespace
+    app.style.transformOrigin = "top left"; 
     app.style.width = `${baseWidth}px`;
     app.style.height = `${baseHeight}px`;
     app.style.position = "absolute";
-    app.style.top = "0";    //exact
+    app.style.top = "0";
     app.style.left = "0";
 }
 window.addEventListener("load", scaleDash);
-window.addEventListener("resize", scaleDash);   //for testing
+window.addEventListener("resize", scaleDash);
