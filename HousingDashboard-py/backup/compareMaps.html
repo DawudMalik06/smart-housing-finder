@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="css/main.css"/>
 </head>
 <body>
+    <style>
+        #app{
+            overflow-y: scroll;
+        }
+    </style>
     <div class="bg-fade"></div>
     <div class="bg-fade"></div>
     <div class="bg-fade"></div>
@@ -136,8 +141,8 @@
         }
 
         function createChart() {
-            const margin = {top: 20, right: 30, bottom: 120, left: 60};
-            const width = Math.max(data.length * 40, 800) - margin.left - margin.right;
+            const margin = { top: 20, right: 30, bottom: 120, left: 60 };
+            const width = data.length * 40;  // Let the chart go wide naturally
             const height = 500 - margin.top - margin.bottom;
 
             d3.select("#chart").html("");
@@ -190,16 +195,16 @@
                 .attr("y", d => y(d.score))
                 .attr("height", d => height - y(d.score))
                 .attr("fill", d => getScoreColor(d.score))
-                .on("mouseover", function(event, d) {
+                .on("mouseover", function (event, d) {
                     tooltip.transition().duration(200).style("opacity", 0.9);
                     tooltip.html(`<strong>${d.neighborhood}</strong><br>Score: ${d.score.toFixed(4)}<br>Rating: ${getRating(d.score)}`)
                         .style("left", (event.pageX + 10) + "px")
                         .style("top", (event.pageY - 28) + "px");
                 })
-                .on("mouseout", function() {
+                .on("mouseout", function () {
                     tooltip.transition().duration(500).style("opacity", 0);
                 })
-                .on("click", function(event, d) {
+                .on("click", function (event, d) {
                     toggleNeighborhoodSelection(d.neighborhood);
                 });
 

@@ -264,16 +264,22 @@ th {
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 8px;
     padding: 20px;
-    margin: 20px 0;
+    margin: 20px auto; /* center horizontally */
+    max-width: 1200px;  /* limit total width */
+    width: 95%;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-sizing: border-box;
 }
-
 .chart-container {
     width: 100%;
-    margin-top: 20px;
     overflow-x: auto;
+    margin-top: 20px;
+    padding-bottom: 10px;
 }
-
+#chart svg {
+    min-width: 800px;
+    max-width: 100%;
+}
 .tooltip {
     position: absolute;
     padding: 10px;
