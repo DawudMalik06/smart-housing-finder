@@ -167,3 +167,29 @@ html, body{
     justify-content: center;
     align-items: center;
 }
+#info-box{
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75%;
+    min-height: 150px;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    border-radius: 10px;
+    padding: 1.5rem;
+    display: none; /* hidden by default */
+    pointer-events: auto;
+}
+#info-box-content{
+    font-size: 1rem;
+    color: #333;
+}
+.leaflet-interactive:focus{
+    outline: none !important;
+}
+.leaflet-interactive{
+    pointer-events: auto;
+    transition: fill-opacity 0.2s ease-in-out;
+}
