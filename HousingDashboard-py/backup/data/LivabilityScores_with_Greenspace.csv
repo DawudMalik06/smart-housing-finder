@@ -1,31 +1,30 @@
-Neighborhood,LivabilityScore,Cost,GreenSpace
-Stocksbridge and Upper Don,0.597705882,4174,Yes
-Stannington,0.6,4507,Yes
-Fulwood,0.5783125,1860,No
-Fulwood,0.461637931,2294,No
-Dore and Totley,0.403821429,2130,No
-Beauchief and Greenhill,0.529973333,2095,No
-Ecclesall,0.412568627,4772,Yes
-Broomhill,0.47836,4092,Yes
-Crookes,0.527531646,2638,No
-Walkley,0.475378378,3169,Yes
-Hillsbrough,0.491941176,1466,No
-Southey,0.505795918,2238,Yes
-West Ecclesfield,0.468386667,1330,No
-East Ecclesfield,0.577222222,2482,Yes
-Shiregreen and Brightside,0.494931507,3135,Yes
-Darnall,0.522560976,4444,Yes
-Woodhouse,0.566311688,4171,Yes
-Beighton,0.49559292,3919,Yes
-Mosborough,0.4256,4735,Yes
-Birley,0.464824324,1130,No
-Richmond,0.517186441,2685,Yes
-Manor Castle,0.564372093,4380,Yes
-Burngreave,0.54972,1769,No
-Firth Park,0.523605263,3391,Yes
-Nether Edge,0.468363636,2515,No
-Graves Park,0.400000000,3000,Yes
-Gleadless Valley,0.468356636,2550,Yes
-Arbourthorne,0.478363636,2700,No
-Central,0.568363636,4900,No
-
+Neighborhood,LivabilityScore,GreenSpace,Cost
+Stocksbridge and Upper Don,0.597705882,Yes,2132
+Stannington,0.6,Yes,2367
+Fulwood,0.5783125,No,1856
+Fulwood,0.461637931,No,510
+Dore and Totley,0.403821429,No,364
+Beauchief and Greenhill,0.529973333,No,1137
+Ecclesall,0.412568627,Yes,1548
+Broomhill,0.47836,Yes,1201
+Crookes,0.527531646,No,1799
+Walkley,0.475378378,Yes,1111
+Hillsbrough,0.491941176,No,832
+Southey,0.505795918,Yes,2955
+West Ecclesfield,0.468386667,No,357
+East Ecclesfield,0.577222222,Yes,2417
+Shiregreen and Brightside,0.494931507,Yes,1077
+Darnall,0.522560976,Yes,2598
+Woodhouse,0.566311688,Yes,2650
+Beighton,0.49559292,Yes,1127
+Mosborough,0.4256,Yes,1233
+Birley,0.464824324,No,725
+Richmond,0.517186441,Yes,2895
+Manor Castle,0.564372093,Yes,1814
+Burngreave,0.54972,No,1665
+Firth Park,0.523605263,Yes,2691
+Nether Edge,0.468363636,No,547
+Graves Park,0.4,Yes,830
+Gleadless Valley,0.468356636,Yes,1437
+Arbourthorne,0.478363636,No,792
+Central,0.568363636,No,2461
