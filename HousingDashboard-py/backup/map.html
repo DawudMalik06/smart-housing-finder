@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>SmartHousing Dashboard</title>
     <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
 <body>
     <div class="bg-fade"></div>
@@ -24,22 +26,15 @@
                     <a href="#">Contact</a>
                 </div>
             </div>
-            <div class="layout">
-                <div class="hero-content">
-                <h1>Empowering Futures<br>Through Smart Housing</h1>
-                <p>Explore affordable, energy-efficient homes tailored for students, families, and low-income households across Sheffield.</p>
-                <div class="buttons">
-                    <button class="btn-green" onclick="window.location.href='map.html'">Start Your Journey</button>
+            <div class="layout-map">
+                <div class="filter-box"></div>
+                <div class="map-box">
+                    <div id="map" style="width: 100%; height: 100%;"></div>
                 </div>
-            </div>
-            <div class="stat-card">
-                <h4>🎓 Stat here</h4>
-                <h4>🌍 Stat here</h4>
-                <h4>👩‍🏫 Stat here</h4>
-                <h4>📚 Stat here</h4>
             </div>
         </div>
     </div>    
     <script src="js/responsive.js"></script>
+    <script src="js/map.js"></script>
 </body>
 </html>

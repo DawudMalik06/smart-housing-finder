@@ -128,3 +128,41 @@ html, body{
     color: white;
     width: 300px;
 }
+/* Map CSS */
+.map-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    z-index: 20;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+.layout-map{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1rem 2rem;
+}
+.filter-box{
+    width: 20vw;
+    height: 80vh;
+    border: 0.5px solid black;
+    background: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.map-box{
+    flex: 1;
+    height: 80vh;
+    border: 0.5px solid black;
+    background: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
