@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>LiveTwiceByThinkingTwice | Interactive Map</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <style>
+        path.leaflet-interactive:focus{
+            outline: none !important;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-white font-sans antialiased h-screen flex flex-col overflow-hidden selection:bg-green-500 selection:text-slate-900">
+    <!--nav-->
+    <nav class="flex items-center justify-between px-6 sm:px-12 py-6 bg-slate-900/80 backdrop-blur-md border-b border-slate-700/80 sticky top-0 z-50">
+        <div class="text-lg sm:text-xl font-extrabold tracking-tight font-mono">
+            LiveTwice<span class="text-green-400">ByThinkingTwice</span>
+        </div>
+        <div class="space-x-4 sm:space-x-8 text-xs sm:text-sm font-semibold">
+            <a href="index.html" class="hover:text-green-400 transition">Home</a>
+            <a href="about.html" class="hover:text-green-400 transition">About</a>
+            <a href="compare.html" class="hover:text-green-400 transition">Compare</a>
+            <a href="map.html" class="text-green-400 font-bold">Explore Map</a>
+        </div>
+    </nav>
+    <!--mainn-->
+    <div class="flex flex-col lg:flex-row flex-1 relative overflow-hidden">
+        <!--LHS-->
+        <aside class="w-full lg:w-96 bg-slate-800/80 border-b lg:border-b-0 lg:border-r border-slate-700/80 p-6 flex flex-col gap-6 overflow-y-auto shrink-0 z-40 backdrop-blur-sm shadow-xl">
+            <div>
+                <h2 class="text-base sm:text-lg font-bold text-slate-100">Dynamic Filter Engine</h2>
+                <p class="text-xs text-slate-400 mt-1">Adjust thresholds to automatically update visible spatial regions.</p>
+            </div>
+            <!--rent-->
+            <div class="space-y-2 border-b border-slate-700/80 pb-5">
+                <div class="flex justify-between text-xs sm:text-sm">
+                    <label for="cost-range" class="font-semibold text-slate-300">Max Monthly Rent</label>
+                    <span id="cost-value" class="font-mono text-green-400 font-bold"></span>
+                </div>
+                <input type="range" id="cost-range" class="w-full accent-green-500 cursor-pointer bg-slate-900 rounded-lg">
+                <div class="flex justify-between text-[10px] text-slate-500 font-mono">
+                    <span id="cost-min-label">Min</span>
+                    <span id="cost-max-label">Max</span>
+                </div>
+            </div>
+            <!--livability-->
+            <div class="space-y-2 border-b border-slate-700/80 pb-5">
+                <div class="flex justify-between text-xs sm:text-sm">
+                    <label for="score-range" class="font-semibold text-slate-300">Min Livability Index</label>
+                    <span id="score-value" class="font-mono text-cyan-400 font-bold">0.10</span>
+                </div>
+                <input type="range" id="score-range" min="0.1" max="1.0" step="0.01" value="0.1" class="w-full accent-cyan-500 cursor-pointer bg-slate-900 rounded-lg">
+                <div class="flex justify-between text-[10px] text-slate-500 font-mono">
+                    <span>0.1 (Deprived)</span>
+                    <span>1.0 (Optimal)</span>
+                </div>
+            </div>
+            <!--greenspace-->
+            <div class="flex items-center justify-between pt-1">
+                <div>
+                    <label for="green-toggle" class="font-semibold text-xs sm:text-sm text-slate-300 cursor-pointer">Requires Green Space</label>
+                    <p class="text-[10px] text-slate-500">Isolate greenspace zones</p>
+                </div>
+                <input type="checkbox" id="green-toggle" class="w-4 h-4 sm:w-5 sm:h-5 accent-green-500 rounded cursor-pointer">
+            </div>
+            <!--description-->
+            <div class="mt-auto bg-slate-900/60 p-4 rounded-2xl border border-slate-700/80 text-xs space-y-2 hidden lg:block">
+                <div class="font-bold text-slate-400 mb-1.5 uppercase tracking-wider text-[10px] font-mono">Livability Heatmap</div>
+                <div class="flex items-center gap-2.5"><span class="w-3 h-3 rounded-full bg-emerald-500 inline-block shrink-0"></span> Optimal (&gt; 0.8)</div>
+                <div class="flex items-center gap-2.5"><span class="w-3 h-3 rounded-full bg-blue-500 inline-block shrink-0"></span> Balanced (&gt; 0.5)</div>
+                <div class="flex items-center gap-2.5"><span class="w-3 h-3 rounded-full bg-amber-500 inline-block shrink-0"></span> Moderate (&gt; 0.3)</div>
+                <div class="flex items-center gap-2.5"><span class="w-3 h-3 rounded-full bg-red-500 inline-block shrink-0"></span> Deprived (&lt; 0.3)</div>
+            </div>
+        </aside>
+        <!--map box-->
+        <main class="flex-1 relative h-full min-h-[400px] lg:min-h-0">
+            <div id="map" class="w-full h-full z-10"></div>
+            <div id="info-box" style="display: none;" class="absolute top-4 right-4 sm:top-6 sm:right-6 z-30 w-[calc(100%-2rem)] sm:w-80 bg-slate-900/95 border border-slate-700 rounded-2xl p-5 sm:p-6 shadow-2xl backdrop-blur-md">
+                <button id="close-info" class="absolute top-4 right-4 text-slate-400 hover:text-white text-base sm:text-lg font-bold">&times;</button>
+                <div id="info-box-content" class="space-y-3"></div>
+            </div>
+        </main>
+    </div>
+    <script src="../js/map.js"></script>
+</body>
+</html>

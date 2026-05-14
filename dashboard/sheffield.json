@@ -195,8 +195,8 @@
         "WD13CDO": "00CGGG",
         "WD13NM": "Arbourthorne",
         "WD13NMW": null,
-        "LivabilityScore": 0.478364,
-        "Cost": 792,
+        "LivabilityScore": 0.144,
+        "Cost": 650,
         "GreenSpace": "No"
       },
       "id": "E05001039"
@@ -507,8 +507,8 @@
         "WD13CDO": "00CGGH",
         "WD13NM": "Beauchief and Greenhill",
         "WD13NMW": null,
-        "LivabilityScore": 0.529973,
-        "Cost": 1137,
+        "LivabilityScore": 0.4009,
+        "Cost": 526,
         "GreenSpace": "No"
       },
       "id": "E05001040"
@@ -739,8 +739,8 @@
         "WD13CDO": "00CGGJ",
         "WD13NM": "Beighton",
         "WD13NMW": null,
-        "LivabilityScore": 0.495593,
-        "Cost": 1127,
+        "LivabilityScore": 0.4651,
+        "Cost": 1249,
         "GreenSpace": "Yes"
       },
       "id": "E05001041"
@@ -1019,9 +1019,9 @@
         "WD13CDO": "00CGGK",
         "WD13NM": "Birley",
         "WD13NMW": null,
-        "LivabilityScore": 0.464824,
-        "Cost": 725,
-        "GreenSpace": "No"
+        "LivabilityScore": 0.3688,
+        "Cost": 366,
+        "GreenSpace": "Yes"
       },
       "id": "E05001042"
     },
@@ -1319,8 +1319,8 @@
         "WD13CDO": "00CGGL",
         "WD13NM": "Broomhill",
         "WD13NMW": null,
-        "LivabilityScore": 0.47836,
-        "Cost": 1201,
+        "LivabilityScore": 0.7542,
+        "Cost": 437,
         "GreenSpace": "Yes"
       },
       "id": "E05001043"
@@ -1571,9 +1571,9 @@
         "WD13CDO": "00CGGM",
         "WD13NM": "Burngreave",
         "WD13NMW": null,
-        "LivabilityScore": 0.54972,
-        "Cost": 1665,
-        "GreenSpace": "No"
+        "LivabilityScore": 0.1,
+        "Cost": 913,
+        "GreenSpace": "Yes"
       },
       "id": "E05001044"
     },
@@ -1831,9 +1831,9 @@
         "WD13CDO": "00CGGN",
         "WD13NM": "Central",
         "WD13NMW": null,
-        "LivabilityScore": 0.568364,
-        "Cost": 2461,
-        "GreenSpace": "No"
+        "LivabilityScore": 0.3688,
+        "Cost": 381,
+        "GreenSpace": "Yes"
       },
       "id": "E05001045"
     },
@@ -2171,9 +2171,9 @@
         "WD13CDO": "00CGGP",
         "WD13NM": "Crookes",
         "WD13NMW": null,
-        "LivabilityScore": 0.527532,
-        "Cost": 1799,
-        "GreenSpace": "No"
+        "LivabilityScore": 0.6899,
+        "Cost": 1422,
+        "GreenSpace": "Yes"
       },
       "id": "E05001046"
     },
@@ -2519,8 +2519,8 @@
         "WD13CDO": "00CGGQ",
         "WD13NM": "Darnall",
         "WD13NMW": null,
-        "LivabilityScore": 0.522561,
-        "Cost": 2598,
+        "LivabilityScore": 0.1761,
+        "Cost": 620,
         "GreenSpace": "Yes"
       },
       "id": "E05001047"
@@ -3195,9 +3195,9 @@
         "WD13CDO": "00CGGR",
         "WD13NM": "Dore and Totley",
         "WD13NMW": null,
-        "LivabilityScore": 0.403821,
-        "Cost": 364,
-        "GreenSpace": "No"
+        "LivabilityScore": 0.9148,
+        "Cost": 1362,
+        "GreenSpace": "Yes"
       },
       "id": "E05001048"
     },
@@ -3695,8 +3695,8 @@
         "WD13CDO": "00CGGS",
         "WD13NM": "East Ecclesfield",
         "WD13NMW": null,
-        "LivabilityScore": 0.577222,
-        "Cost": 2417,
+        "LivabilityScore": 0.4972,
+        "Cost": 429,
         "GreenSpace": "Yes"
       },
       "id": "E05001049"
@@ -4155,8 +4155,8 @@
         "WD13CDO": "00CGGT",
         "WD13NM": "Ecclesall",
         "WD13NMW": null,
-        "LivabilityScore": 0.412569,
-        "Cost": 1548,
+        "LivabilityScore": 0.8827,
+        "Cost": 1644,
         "GreenSpace": "Yes"
       },
       "id": "E05001050"
@@ -4379,8 +4379,8 @@
         "WD13CDO": "00CGGU",
         "WD13NM": "Firth Park",
         "WD13NMW": null,
-        "LivabilityScore": 0.523605,
-        "Cost": 2691,
+        "LivabilityScore": 0.1118,
+        "Cost": 617,
         "GreenSpace": "Yes"
       },
       "id": "E05001051"
@@ -4995,9 +4995,9 @@
         "WD13CDO": "00CGGW",
         "WD13NM": "Fulwood",
         "WD13NMW": null,
-        "LivabilityScore": 0.519975,
-        "Cost": 1183,
-        "GreenSpace": "No"
+        "LivabilityScore": 0.8827,
+        "Cost": 761,
+        "GreenSpace": "Yes"
       },
       "id": "E05001052"
     },
@@ -5251,9 +5251,9 @@
         "WD13CDO": "00CGGX",
         "WD13NM": "Gleadless Valley",
         "WD13NMW": null,
-        "LivabilityScore": 0.468357,
-        "Cost": 1437,
-        "GreenSpace": "Yes"
+        "LivabilityScore": 0.2403,
+        "Cost": 580,
+        "GreenSpace": "No"
       },
       "id": "E05001053"
     },
@@ -5531,8 +5531,8 @@
         "WD13CDO": "00CGGY",
         "WD13NM": "Graves Park",
         "WD13NMW": null,
-        "LivabilityScore": 0.4,
-        "Cost": 830,
+        "LivabilityScore": 0.5615,
+        "Cost": 450,
         "GreenSpace": "Yes"
       },
       "id": "E05001054"
@@ -5755,9 +5755,9 @@
         "WD13CDO": "00CGGZ",
         "WD13NM": "Hillsborough",
         "WD13NMW": null,
-        "LivabilityScore": 0.5,
-        "Cost": 832,
-        "GreenSpace": "No"
+        "LivabilityScore": 0.4972,
+        "Cost": 732,
+        "GreenSpace": "Yes"
       },
       "id": "E05001055"
     },
@@ -5975,9 +5975,9 @@
         "WD13CDO": "00CGHA",
         "WD13NM": "Manor Castle",
         "WD13NMW": null,
-        "LivabilityScore": 0.564372,
-        "Cost": 1814,
-        "GreenSpace": "Yes"
+        "LivabilityScore": 0.1118,
+        "Cost": 897,
+        "GreenSpace": "No"
       },
       "id": "E05001056"
     },
@@ -6315,8 +6315,8 @@
         "WD13CDO": "00CGHB",
         "WD13NM": "Mosborough",
         "WD13NMW": null,
-        "LivabilityScore": 0.4256,
-        "Cost": 1233,
+        "LivabilityScore": 0.5294,
+        "Cost": 533,
         "GreenSpace": "Yes"
       },
       "id": "E05001057"
@@ -6511,8 +6511,8 @@
         "WD13CDO": "00CGHC",
         "WD13NM": "Nether Edge",
         "WD13NMW": null,
-        "LivabilityScore": 0.468364,
-        "Cost": 547,
+        "LivabilityScore": 0.4651,
+        "Cost": 707,
         "GreenSpace": "No"
       },
       "id": "E05001058"
@@ -6743,8 +6743,8 @@
         "WD13CDO": "00CGHD",
         "WD13NM": "Richmond",
         "WD13NMW": null,
-        "LivabilityScore": 0.517186,
-        "Cost": 2895,
+        "LivabilityScore": 0.3367,
+        "Cost": 488,
         "GreenSpace": "Yes"
       },
       "id": "E05001059"
@@ -7027,9 +7027,9 @@
         "WD13CDO": "00CGHE",
         "WD13NM": "Shiregreen and Brightside",
         "WD13NMW": null,
-        "LivabilityScore": 0.494932,
-        "Cost": 1077,
-        "GreenSpace": "Yes"
+        "LivabilityScore": 0.1118,
+        "Cost": 433,
+        "GreenSpace": "No"
       },
       "id": "E05001060"
     },
@@ -7331,8 +7331,8 @@
         "WD13CDO": "00CGHF",
         "WD13NM": "Southey",
         "WD13NMW": null,
-        "LivabilityScore": 0.505796,
-        "Cost": 2955,
+        "LivabilityScore": 0.144,
+        "Cost": 1011,
         "GreenSpace": "Yes"
       },
       "id": "E05001061"
@@ -8211,8 +8211,8 @@
         "WD13CDO": "00CGHG",
         "WD13NM": "Stannington",
         "WD13NMW": null,
-        "LivabilityScore": 0.6,
-        "Cost": 2367,
+        "LivabilityScore": 0.5615,
+        "Cost": 600,
         "GreenSpace": "Yes"
       },
       "id": "E05001062"
@@ -9495,9 +9495,9 @@
         "WD13CDO": "00CGHH",
         "WD13NM": "Stocksbridge and Upper Don",
         "WD13NMW": null,
-        "LivabilityScore": 0.597706,
-        "Cost": 2132,
-        "GreenSpace": "Yes"
+        "LivabilityScore": 0.5294,
+        "Cost": 654,
+        "GreenSpace": "No"
       },
       "id": "E05001063"
     },
@@ -9811,8 +9811,8 @@
         "WD13CDO": "00CGHJ",
         "WD13NM": "Walkley",
         "WD13NMW": null,
-        "LivabilityScore": 0.475378,
-        "Cost": 1111,
+        "LivabilityScore": 0.5936,
+        "Cost": 604,
         "GreenSpace": "Yes"
       },
       "id": "E05001064"
@@ -10283,9 +10283,9 @@
         "WD13CDO": "00CGHK",
         "WD13NM": "West Ecclesfield",
         "WD13NMW": null,
-        "LivabilityScore": 0.468387,
-        "Cost": 357,
-        "GreenSpace": "No"
+        "LivabilityScore": 0.4651,
+        "Cost": 580,
+        "GreenSpace": "Yes"
       },
       "id": "E05001065"
     },
@@ -10451,8 +10451,8 @@
         "WD13CDO": "00CGHL",
         "WD13NM": "Woodhouse",
         "WD13NMW": null,
-        "LivabilityScore": 0.566312,
-        "Cost": 2650,
+        "LivabilityScore": 0.3688,
+        "Cost": 381,
         "GreenSpace": "Yes"
       },
       "id": "E05001066"

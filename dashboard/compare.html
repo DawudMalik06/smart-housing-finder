@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Compare Areas | LiveTwiceByThinkingTwice</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>  /*graphs vs table*/
+        .tab-button.active { border-bottom: 2px solid #22c55e; color: #22c55e; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+    </style>
+</head>
+<body class="bg-slate-900/95 text-white font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-green-500 selection:text-slate-900">
+    <!--nav-->
+    <nav class="flex items-center justify-between px-6 sm:px-12 py-6 bg-slate-900/80 backdrop-blur-md border-b border-slate-700/80 sticky top-0 z-50">
+        <div class="text-lg sm:text-xl font-extrabold tracking-tight font-mono">
+            LiveTwice<span class="text-green-400">ByThinkingTwice</span>
+        </div>
+        <div class="space-x-4 sm:space-x-8 text-xs sm:text-sm font-semibold">
+            <a href="index.html" class="hover:text-green-400 transition">Home</a>
+            <a href="about.html" class="hover:text-green-400 transition">About</a>
+            <a href="compare.html" class="text-green-400">Compare</a>
+            <a href="map.html" class="bg-green-500 text-slate-900 px-3.5 py-2 rounded-lg hover:bg-green-400 transition font-bold">Explore Map</a>
+        </div>
+    </nav>
+    <!--main-->
+    <main class="max-w-7xl mx-auto px-6 sm:px-12 py-12 flex-1 w-full space-y-10">
+        <!--top-->
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-slate-700/80 pb-6">
+            <div>
+                <h1 class="text-3xl font-extrabold tracking-tight">Comparative Analysis Engine</h1>
+                <p class="text-slate-400 text-xs sm:text-sm mt-1">Explore machine learning insights generated from real housing data.</p>
+            </div>
+            <div class="relative w-full md:w-72">
+                <input type="text" id="search" placeholder="Filter Wards..."  class="w-full bg-slate-900/80 border border-slate-700/80 rounded-xl px-4 py-2.5 text-xs text-slate-100 focus:outline-none focus:border-green-500 transition">
+            </div>
+        </div>
+        <!--analysis-->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <!--lhs-->
+            <div class="lg:col-span-8 bg-slate-900/80 border border-slate-700/80 rounded-3xl p-6 shadow-2xl backdrop-blur-sm space-y-6">
+                <div class="flex border-b border-slate-700/80">
+                    <button class="tab-button active pb-3 px-4 text-sm font-bold text-slate-400 hover:text-white transition" data-tab="chart-tab">
+                        Dynamic Distribution Graph
+                    </button>
+                    <button class="tab-button pb-3 px-4 text-sm font-bold text-slate-400 hover:text-white transition" data-tab="table-tab">
+                        Tabular Data
+                    </button>
+                </div>
+                <!--sort graph-->
+                <div id="chart-tab" class="tab-content active space-y-4">
+                    <div class="flex justify-between items-center text-xs text-slate-400 bg-slate-800/80 p-2.5 rounded-lg border border-slate-700/80">
+                        <span>Graph Target Focus: <strong class="text-slate-200">Livability Index</strong></span>
+                        <div class="flex items-center gap-3">
+                            <button id="sortName" class="text-green-400 transition font-mono">Sort Names</button>
+                            <span>|</span>
+                            <button id="sortScore" class="hover:text-green-400 transition font-mono">Sort Index</button>
+                        </div>
+                    </div>
+                    <div id="chart-container" class="w-full overflow-x-auto relative">
+                        <div id="chart" class="min-w-[700px] h-[450px]"></div>
+                    </div>
+                </div>
+                <!--tables-->
+                <div id="table-tab" class="tab-content overflow-x-auto">
+                    <table class="w-full text-left border-collapse text-xs">
+                        <thead>
+                            <tr class="border-b border-slate-700/80 text-slate-400 uppercase font-mono">
+                                <th class="py-3 px-4">Ward Name</th>
+                                <th class="py-3 px-4">Livability Index</th>
+                                <th class="py-3 px-4">Average Monthly Rent</th>
+                                <th class="py-3 px-4">Environmental Indicator</th>
+                                <th class="py-3 px-4 text-right">Select Wards</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-body" class="divide-y divide-slate-700/40 text-slate-200"></tbody>
+                    </table>
+                </div>
+            </div>
+            <!--compare-->
+            <div class="lg:col-span-4 space-y-6">
+                <div class="bg-slate-900/80 border border-slate-700/80 p-6 rounded-3xl space-y-4">
+                    <div class="border-b border-slate-700/80 pb-3">
+                        <h3 class="text-sm font-bold text-slate-200 uppercase tracking-wide">Ward Comparison</h3>
+                        <p class="text-[11px] text-slate-500 mt-0.5">Select up to two wards to cross-examine metrics.</p>
+                    </div>
+                    <div id="comparison-container" class="space-y-4">
+                        <div class="text-xs text-slate-500 text-center py-8 border border-dashed border-slate-700/80 rounded-xl">
+                            Selection Empty.<br>Click graph bars or active table properties to cross-examine output metrics.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-slate-900/80 border-t border-slate-700/80 py-6 text-center text-xs text-slate-600">
+        <p>&copy; 2025 LiveTwiceByThinkingTwice. Built for the Sheffield AI Hackathon.</p>
+    </footer>
+
+    <script src="../js/compare.js"></script>
+</body>
+</html>
