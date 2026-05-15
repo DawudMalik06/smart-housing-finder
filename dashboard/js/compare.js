@@ -16,13 +16,16 @@ function getRating(score){
 }
 
 //fetch
-d3.csv("../final_output/LivabilityScores_with_Greenspace.csv").then(loadedRows => {
-    data = loadedRows.map(d => ({
-        neighborhood: (d.Neighborhood || "Undefined Profile").replace(/\s+Ward$/i, ""), //removing ward append
-        score: parseFloat(d.LivabilityScore || 0),
-        cost: parseInt(d.Cost || 0),
-        greenSpace: d.GreenSpace || "No"
-    })).filter(d => d.neighborhood !== "Undefined Profile");
+d3.json("sheffield.json").then(geoData => {
+    data = geoData.features
+        .map(f => f.properties)
+        .filter(p => p.LivabilityScore !== undefined) 
+        .map(p => ({
+            neighborhood: (p.WD13NM || "Undefined Profile").replace(/\s+Ward$/i, ""), //removing ward append
+            score: parseFloat(p.LivabilityScore || 0),
+            cost: parseInt(p.Cost || 0),
+            greenSpace: p.GreenSpace || "No"
+        })).filter(d => d.neighborhood !== "Undefined Profile");
 
     updateVisualisation();
     updateComparisonView();
@@ -30,7 +33,7 @@ d3.csv("../final_output/LivabilityScores_with_Greenspace.csv").then(loadedRows =
     console.error("Pipeline Failure:", err);
     document.getElementById("chart-container").innerHTML = `
         <div class="text-xs text-red-400 p-4 bg-red-950/20 rounded-xl border border-red-900/50">
-            Failed to initialise dataset. Verify target 'LivabilityScores_with_Greenspace.csv'.
+            Failed to load JSON data. Ensure the path is correct and the pipeline has run.
         </div>`;
 });
 

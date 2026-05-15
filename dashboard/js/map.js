@@ -16,7 +16,7 @@ function getColor(score) {
                          '#ef4444';
 }
 
-fetch('../dashboard/sheffield.json') 
+fetch('sheffield.json') 
     .then(res => res.json())
     .then(data => {
 
