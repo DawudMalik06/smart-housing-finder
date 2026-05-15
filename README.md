@@ -1,5 +1,5 @@
-# LiveTwice<span style="color: #4ade80;">ByThinkingTwice</span> | Smart Housing Finder
-
+![Name](dashboard_images/team_name.png)
+# Smart Housing Finder
 [![Deploy Status](https://img.shields.io/badge/Deployed_On-Netlify-00C7B7?style=for-the-badge&logo=netlify)](https://YOUR-NETLIFY-LINK-HERE.netlify.app)
 ---
 ![Badge](dashboard_images/badge.png)
@@ -27,7 +27,7 @@ Comparison Graph Preview
 ![Compare Table](dashboard_images/compare_table.png)
 Comparison Table Preview
 ---
-## 🏆 Project Overview
+## Project Overview
 Finding affordable housing is a massive challenge. We built a model leveraging open data from the **Sheffield City Council** to cluster neighbourhoods based on:
 - **Liveability:** Using standard UK IMD indicators.
 - **Green Areas:** Proximity to parks and environmental zones.
@@ -36,15 +36,13 @@ Finding affordable housing is a massive challenge. We built a model leveraging o
 Presented **live** on stage, this project was awarded the **Product Innovation Award** for originality and impact.
 ## Team First | Roster
 
-- **Dawud Malik** <span style="margin-left:20px; border:1px solid #a78bfa; padding:2px 8px; border-radius:6px; color:#a78bfa;">Full Stack Engineer</span>  
+## Team First | Roster
 
-- **Rameen Burdabar** <span style="margin-left:20px; border:1px solid #a78bfa; padding:2px 8px; border-radius:6px; color:#a78bfa;">Full Stack Engineer</span>  
-
-- **Mahmoud Ayach** <span style="margin-left:20px; border:1px solid #4ade80; padding:2px 8px; border-radius:6px; color:#4ade80;">Data Processing</span>  
-
-- **Ahmir Riaz** <span style="margin-left:20px; border:1px solid #4ade80; padding:2px 8px; border-radius:6px; color:#4ade80;">Data Processing</span>  
-
-- **Ravi Khunt** <span style="margin-left:20px; border:1px solid #f87171; padding:2px 8px; border-radius:6px; color:#f87171;">Design Architect</span>
+- **Dawud Malik** &nbsp;&nbsp; ![Full Stack](https://img.shields.io/badge/Full_Stack_Engineer-A78BFA?style=flat)
+- **Rameen Burdabar** &nbsp;&nbsp; ![Full Stack](https://img.shields.io/badge/Full_Stack_Engineer-A78BFA?style=flat)
+- **Mahmoud Ayach** &nbsp;&nbsp; ![Data Processing](https://img.shields.io/badge/Data_Processing-4ADE80?style=flat)
+- **Ahmir Riaz** &nbsp;&nbsp; ![Data Processing](https://img.shields.io/badge/Data_Processing-4ADE80?style=flat)
+- **Ravi Khunt** &nbsp;&nbsp; ![Design Architect](https://img.shields.io/badge/Design_Architect-F87171?style=flat)
 
 ## Data Architecture & Sources
 Our model focuses strictly on three core pillars of open government data to generate its recommendations:
@@ -75,10 +73,10 @@ View our **Netlify Page [HERE]()**
 
 **OR**
 
-The frontend is pre-compiled and ready to go. The ML model's output is already injected into the `sheffield.json` boundary file.
-    1. Clone the repository.
-    2. Open `index.html` in your browser.
-    3. Ensure you have an active internet connection to load the CDN scripts.
+The frontend is pre-compiled and ready to go. The ML model's output is already injected into the `sheffield.json` boundary file. Just follow these steps:
+- Clone the repository.
+- Open `index.html` in your browser.
+- Ensure you have an active internet connection to load the CDN scripts.
 
 ### **The Hard Way (Run the ML Pipeline)**
 If you want to tweak the clustering algorithm or feed it updated data, you can run the Python pipeline yourself. *Note: A 12-row sample output is provided in `final_output/` to demonstrate the target schema without requiring a full run.*
@@ -91,7 +89,9 @@ If you want to tweak the clustering algorithm or feed it updated data, you can r
 2. **Fetch & Prepare Data:**
 
     Create a `data/` folder in the root directory. Download the datasets from the links above.
-    <span style="color:red">Warning: </span>The **Sheffield House Prices** source is an `.xlsx workbook.` You must manually extract the relevant sheets into `.csv` files before the pipeline can process them.
+    > ![Warning](https://img.shields.io/badge/-Warning-red?style=flat) 
+
+    >The Sheffield House Prices source is an `.xlsx` workbook. You must manually extract the relevant sheets into `.csv` files before the pipeline can process them.
 
 3.  **Customise Configuration (Optional):**
     
@@ -99,7 +99,7 @@ If you want to tweak the clustering algorithm or feed it updated data, you can r
 
 4.  **Execute Pipeline:**
     
-    Run the model to process the **raw data**, execute **K-Means clustering**, and generate the **target CSV.** If you changed your raw data **file names**, ensure you update the target file paths and the <span style="color:red">code in general</span> inside `python/pipeline.py`. Reference the **csv** file in `final_output/` to ensure the output produced by **YOU** follows the same standard format.
+    Run the model to process the **raw data**, execute **K-Means clustering**, and generate the **target CSV.** If you changed your raw data **file names**, ensure you update the target file paths and the **<span style="color:red">code in general</span>** inside `python/pipeline.py`. Reference the **csv** file in `final_output/` to ensure the output produced by **YOU** follows the same standard format.
     ```
     python python/pipeline.py
     ```
