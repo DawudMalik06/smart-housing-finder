@@ -2,7 +2,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/4d03e14f-c13e-4157-b5ba-f06d52dd359d/deploy-status)](https://livetwicebythinkingtwice.netlify.app)
 ---
-![Badge](dashboard_images/badge.png)
+[![Badge](dashboard_images/badge.png)](https://drive.google.com/file/d/1dOmVQjfGieVBV1GWtUbUcnHdzDiFYS1k/view?usp=drive_link/)
 
 ***Built for the Sheffield AI Hackathon***
 ---
@@ -38,11 +38,11 @@ Presented **live** on stage, this project was awarded the **Product Innovation A
 
 ## Team First | Roster
 
-- **Dawud Malik** &nbsp;&nbsp; ![Full Stack](https://img.shields.io/badge/Full_Stack_Engineer-A78BFA?style=flat)
-- **Rameen Burdabar** &nbsp;&nbsp; ![Full Stack](https://img.shields.io/badge/Full_Stack_Engineer-A78BFA?style=flat)
-- **Mahmoud Ayach** &nbsp;&nbsp; ![Data Processing](https://img.shields.io/badge/Data_Processing-4ADE80?style=flat)
-- **Ahmir Riaz** &nbsp;&nbsp; ![Data Processing](https://img.shields.io/badge/Data_Processing-4ADE80?style=flat)
-- **Ravi Khunt** &nbsp;&nbsp; ![Design Architect](https://img.shields.io/badge/Design_Architect-F87171?style=flat)
+- **[Dawud Malik](https://www.linkedin.com/in/dawud-malik/)** &nbsp;&nbsp; ![Full Stack](https://img.shields.io/badge/Full_Stack_Engineer-A78BFA?style=flat)
+- **[Rameen Burdabar](https://www.linkedin.com/in/rameen-burdabar/)** &nbsp;&nbsp; ![Full Stack](https://img.shields.io/badge/Full_Stack_Engineer-A78BFA?style=flat)
+- **[Mahmoud Ayach](https://www.linkedin.com/in/mahmoud-ayach-25339021b/)** &nbsp;&nbsp; ![Data Processing](https://img.shields.io/badge/Data_Processing-4ADE80?style=flat)
+- **[Ahmir Riaz](https://www.linkedin.com/in/ahmirriaz/)** &nbsp;&nbsp; ![Data Processing](https://img.shields.io/badge/Data_Processing-4ADE80?style=flat)
+- **[Ravi Khunt](https://www.linkedin.com/in/ravi-khunt01/)** &nbsp;&nbsp; ![Design Architect](https://img.shields.io/badge/Design_Architect-F87171?style=flat)
 
 ## Data Architecture & Sources
 Our model focuses strictly on three core pillars of open government data to generate its recommendations:
@@ -69,7 +69,7 @@ Our model focuses strictly on three core pillars of open government data to gene
 ## How to Run the Project
 
 ### **View the App**
-View our **Netlify Page [HERE](https://livetwicebythinkingtwice.netlify.app/)**
+View our **Netlify WebPage [HERE](https://livetwicebythinkingtwice.netlify.app/)**
 
 **OR**
 
