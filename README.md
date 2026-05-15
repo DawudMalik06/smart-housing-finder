@@ -99,12 +99,15 @@ If you want to tweak the clustering algorithm or feed it updated data, you can r
 
 4.  **Execute Pipeline:**
     
-    Run the model to process the **raw data**, execute **K-Means clustering**, and generate the **target CSV.** If you changed your raw data **file names**, ensure you update the target file paths and the **<span style="color:red">code in general</span>** inside `python/pipeline.py`. Reference the **csv** file in `final_output/` to ensure the output produced by **YOU** follows the same standard format.
+    Run the model to process the **raw data**, execute **K-Means clustering**, and generate the **target CSV.**
+    > ![Warning](https://img.shields.io/badge/-Warning-red?style=flat)
+    
+    > If you changed your raw data **file names**, ensure you update the target file paths and the **<span style="color:red">code in general</span>** inside `python/pipeline.py`. Reference the **csv** file in `final_output/` to ensure the output produced by **YOU** follows the same standard format.
     ```
     python python/pipeline.py
     ```
 
-5.  **Update Map Boundaries:**
+6.  **Update Map Boundaries:**
 
     Inject the freshly generated **CSV** data into the **GeoJSON file** used by the frontend dashboard. If your output paths changed in the previous step, update the corresponding paths in `python/updatemap.py` before running.
     ```
