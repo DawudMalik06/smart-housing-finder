@@ -1,6 +1,6 @@
-![Name](dashboard_images/team_name.png)
-# Smart Housing Finder
-[![Deploy Status](https://img.shields.io/badge/Deployed_On-Netlify-00C7B7?style=for-the-badge&logo=netlify)](https://YOUR-NETLIFY-LINK-HERE.netlify.app)
+[![LiveTwiceByThinkingTwice](dashboard_images/team_name.png)](https://livetwicebythinkingtwice.netlify.app)
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4d03e14f-c13e-4157-b5ba-f06d52dd359d/deploy-status)](https://livetwicebythinkingtwice.netlify.app)
 ---
 ![Badge](dashboard_images/badge.png)
 
@@ -69,7 +69,7 @@ Our model focuses strictly on three core pillars of open government data to gene
 ## How to Run the Project
 
 ### **View the App**
-View our **Netlify Page [HERE]()**
+View our **Netlify Page [HERE](https://livetwicebythinkingtwice.netlify.app/)**
 
 **OR**
 
