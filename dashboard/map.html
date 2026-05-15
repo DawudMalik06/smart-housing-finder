@@ -15,11 +15,11 @@
 </head>
 <body class="bg-slate-900 text-white font-sans antialiased h-screen flex flex-col overflow-hidden selection:bg-green-500 selection:text-slate-900">
     <!--nav-->
-    <nav class="flex items-center justify-between px-6 sm:px-12 py-6 bg-slate-900/80 backdrop-blur-md border-b border-slate-700/80 sticky top-0 z-50">
-        <div class="text-lg sm:text-xl font-extrabold tracking-tight font-mono">
+    <nav class="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0 px-6 sm:px-12 py-6 bg-slate-900/80 backdrop-blur-md border-b border-slate-700/80 sticky top-0 z-50">
+        <div class="text-lg sm:text-xl font-extrabold tracking-tight font-mono w-full md:w-auto text-center md:text-left">
             LiveTwice<span class="text-green-400">ByThinkingTwice</span>
         </div>
-        <div class="space-x-4 sm:space-x-8 text-xs sm:text-sm font-semibold">
+        <div class="flex flex-wrap justify-center items-center gap-4 md:gap-8 text-xs sm:text-sm font-semibold">
             <a href="index.html" class="hover:text-green-400 transition">Home</a>
             <a href="about.html" class="hover:text-green-400 transition">About</a>
             <a href="compare.html" class="hover:text-green-400 transition">Compare</a>
@@ -29,7 +29,7 @@
     <!--mainn-->
     <div class="flex flex-col lg:flex-row flex-1 relative overflow-hidden">
         <!--LHS-->
-        <aside class="w-full lg:w-96 bg-slate-800/80 border-b lg:border-b-0 lg:border-r border-slate-700/80 p-6 flex flex-col gap-6 overflow-y-auto shrink-0 z-40 backdrop-blur-sm shadow-xl">
+        <aside class="w-full lg:w-96 max-h-[40vh] lg:max-h-none bg-slate-800/80 border-b lg:border-b-0 lg:border-r border-slate-700/80 p-4 sm:p-6 flex flex-col gap-4 sm:gap-6 overflow-y-auto shrink-0 z-40 backdrop-blur-sm shadow-xl">
             <div>
                 <h2 class="text-base sm:text-lg font-bold text-slate-100">Dynamic Filter Engine</h2>
                 <p class="text-xs text-slate-400 mt-1">Adjust thresholds to automatically update visible spatial regions.</p>
@@ -76,7 +76,7 @@
             </div>
         </aside>
         <!--map box-->
-        <main class="flex-1 relative h-full min-h-[400px] lg:min-h-0">
+        <main class="flex-1 relative w-full h-full min-h-[50vh] lg:min-h-0">
             <div id="map" class="w-full h-full z-10"></div>
             <div id="info-box" style="display: none;" class="absolute top-4 right-4 sm:top-6 sm:right-6 z-30 w-[calc(100%-2rem)] sm:w-80 bg-slate-900/95 border border-slate-700 rounded-2xl p-5 sm:p-6 shadow-2xl backdrop-blur-md">
                 <button id="close-info" class="absolute top-4 right-4 text-slate-400 hover:text-white text-base sm:text-lg font-bold">&times;</button>

@@ -3,46 +3,23 @@ Run this file after running python/pipeline.py to update the sheffield.json file
 '''
 import json
 import pandas as pd
+from pathlib import Path
+
+BASE_DIR = Path(__file__).parent.parent
+CSV_PATH = BASE_DIR / "final_output" / "LivabilityScores_with_Greenspace.csv"
+JSON_PATH = BASE_DIR / "dashboard" / "sheffield.json"
+CONFIG_PATH = Path(__file__).parent / "config.json"
 
 def update_sheffield_json():
-    csv_df = pd.read_csv("../final_output/LivabilityScores_with_Greenspace.csv")
-
-    json_to_csv_map = {
-        'Arbourthorne': 'Park & Arbourthorne Ward',
-        'Beauchief and Greenhill': 'Beauchief & Greenhill Ward',
-        'Beighton': 'Beighton Ward',
-        'Birley': 'Birley Ward',
-        'Broomhill': 'Broomhill & Sharrow Vale Ward',
-        'Burngreave': 'Burngreave Ward',
-        'Central': 'City Ward',
-        'Crookes': 'Crookes & Crosspool Ward',
-        'Darnall': 'Darnall Ward',
-        'Dore and Totley': 'Dore & Totley Ward',
-        'East Ecclesfield': 'East Ecclesfield Ward',
-        'Ecclesall': 'Ecclesall Ward',
-        'Firth Park': 'Firth Park Ward',
-        'Fulwood': 'Fulwood Ward',
-        'Gleadless Valley': 'Gleadless Valley Ward',
-        'Graves Park': 'Graves Park Ward',
-        'Hillsborough': 'Hillsborough Ward',
-        'Manor Castle': 'Manor Castle Ward',
-        'Mosborough': 'Mosborough Ward',
-        'Nether Edge': 'Nether Edge & Sharrow Ward',
-        'Richmond': 'Richmond Ward',
-        'Shiregreen and Brightside': 'Shiregreen & Brightside',
-        'Southey': 'Southey Ward',
-        'Stannington': 'Stannington Ward',
-        'Stocksbridge and Upper Don': 'Stocksbridge & Upper Don Ward',
-        'Walkley': 'Walkley Ward',
-        'West Ecclesfield': 'West Ecclesfield Ward',
-        'Woodhouse': 'Woodhouse Ward'
-    }
+    with open(CONFIG_PATH, "r", encoding="utf-8") as f:
+        config = json.load(f)
     
-    json_path = "../dashboard/sheffield.json" 
-    
-    with open(json_path, "r", encoding="utf-8") as f:
-        map_data = json.load(f)
+    json_to_csv_map = config['json_to_csv_map']
+    csv_df = pd.read_csv(CSV_PATH)
     csv_lookup = csv_df.set_index('Neighborhood').to_dict('index')
+    
+    with open(JSON_PATH, "r", encoding="utf-8") as f:
+        map_data = json.load(f)
     
     updated_count = 0
     for feature in map_data['features']:
@@ -57,8 +34,8 @@ def update_sheffield_json():
             updated_count += 1
         else:
             print(f"Could not find matching CSV row for JSON Ward '{wd13_name}'")
-            
-    with open(json_path, "w", encoding="utf-8") as f:
+
+    with open(JSON_PATH, "w", encoding="utf-8") as f:
         json.dump(map_data, f, ensure_ascii=False, indent=2)
         
     print(f"Injected fresh data into {updated_count} map boundary features.")
