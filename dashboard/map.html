@@ -6,6 +6,7 @@
     <title>LiveTwiceByThinkingTwice | Interactive Map</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50' y='50' dominant-baseline='central' text-anchor='middle' font-size='80'>🏠</text></svg>"/>
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <style>
         path.leaflet-interactive:focus{
@@ -16,8 +17,13 @@
 <body class="bg-slate-900 text-white font-sans antialiased h-screen flex flex-col overflow-hidden selection:bg-green-500 selection:text-slate-900">
     <!--nav-->
     <nav class="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0 px-6 sm:px-12 py-6 bg-slate-900/80 backdrop-blur-md border-b border-slate-700/80 sticky top-0 z-50">
-        <div class="text-lg sm:text-xl font-extrabold tracking-tight font-mono w-full md:w-auto text-center md:text-left">
-            <a href="index.html">LiveTwice<span class="text-green-400">ByThinkingTwice</span></a>
+        <div class="text-base sm:text-xl font-extrabold tracking-tight font-mono w-full md:w-auto flex flex-row flex-nowrap items-center justify-center md:justify-start gap-2">
+            <a href="index.html" class="whitespace-nowrap">LiveTwice<span class="text-green-400">ByThinkingTwice</span></a>
+            <a href="https://github.com/DawudMalik06/smart-housing-finder" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-green-400 transition-colors shrink-0 flex items-center" title="View Source Code">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                    <use href="assets/github.svg"></use>
+                </svg>
+            </a>
         </div>
         <div class="flex flex-wrap justify-center items-center gap-4 md:gap-8 text-xs sm:text-sm font-semibold">
             <a href="index.html" class="hover:text-green-400 transition">Home</a>
