@@ -36,8 +36,6 @@ Finding affordable housing is a massive challenge. We built a model leveraging o
 Presented **live** on stage, this project was awarded the **Product Innovation Award** for originality and impact.
 ## Team First | Roster
 
-## Team First | Roster
-
 - **[Dawud Malik](https://www.linkedin.com/in/dawud-malik/)** &nbsp;&nbsp; ![Full Stack](https://img.shields.io/badge/Full_Stack_Engineer-A78BFA?style=flat)
 - **[Rameen Burdabar](https://www.linkedin.com/in/rameen-burdabar/)** &nbsp;&nbsp; ![Full Stack](https://img.shields.io/badge/Full_Stack_Engineer-A78BFA?style=flat)
 - **[Mahmoud Ayach](https://www.linkedin.com/in/mahmoud-ayach-25339021b/)** &nbsp;&nbsp; ![Data Processing](https://img.shields.io/badge/Data_Processing-4ADE80?style=flat)
